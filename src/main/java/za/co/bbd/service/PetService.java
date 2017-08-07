@@ -58,10 +58,10 @@ public class PetService {
     public boolean uploadImage(int id, String url) {
         Pet pet = findById(id);
         if (pet != null) {
-            return false;
-        } else {
             pet.setImageLocation(url);
             return true;
+        } else {
+            return false;
         }
     }
 
