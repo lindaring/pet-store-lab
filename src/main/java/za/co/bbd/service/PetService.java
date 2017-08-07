@@ -30,7 +30,7 @@ public class PetService {
     }
 
     public Pet findById(int id) {
-        Optional<Pet> pet = petList.stream().filter(p -> p.getId() == id).findFirst().;
+        Optional<Pet> pet = petList.stream().filter(p -> p.getId() == id).findFirst();
         return pet.isPresent() ? pet.get() : null;
     }
 
